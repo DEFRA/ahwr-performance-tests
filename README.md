@@ -1,4 +1,4 @@
-# cdp-perf-test-suite-template
+# ahwr-performance-tests
 
 A JMeter based test runner for the CDP Platform.
 
