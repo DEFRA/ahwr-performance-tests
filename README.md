@@ -1,9 +1,10 @@
 # ahwr-performance-tests
 
-A JMeter based test runner for the CDP Platform.
+This repository contains the performance test suite for AHWR services. 
+Tests are executed using a JMeter-based runner within the CDP Platform.
 
 - [Licence](#licence)
-  - [About the licence](#about-the-licence)
+- [About the licence](#about-the-licence)
 
 ## Build
 
@@ -15,7 +16,30 @@ A successful build results in a Docker container that is capable of running your
 The performance test suites are designed to be run from the CDP Portal.
 The CDP Platform runs test suites in much the same way it runs any other service, it takes a docker image and runs it as an ECS task, automatically provisioning infrastructure as required.
 
-## Local Testing with Docker Compose
+## Local test execution for an environment
+Install Jmeter on the local machine if you need to open and edit the jmx file from this repo in Jmeter UI.
+
+Make sure you have the following set in your .env file:
+
+- ENVIRONMENT=perf-test
+- RUN_ENVIRONMENT=local
+- DEVELOPER_API_KEY = <API key value for the logged-in user from CDP portal>
+- TEST_SCENARIO=ahwr-performance-tests (This is the jmx file name present in scenarios folder)
+
+Now update the user-properties file for the following:
+- thread_count=1
+- ramp_up_seconds=1
+- duration_seconds=30
+
+Now run the command in a terminal from the project directory
+
+```bash
+sh ./local-test-runner.sh
+```
+
+The test will run for 30 seconds with a single user, according to the configuration above. Running tests with a high load on a local environment is not recommended. Local execution should be limited to scripting and debugging. After the test completes, an HTML report can be found in the reports folder.
+
+## Local Testing with Docker Compose - Not applicable for ahwr-performance tests
 
 You can run the entire performance test stack locally using Docker Compose, including LocalStack, Redis, and the target service. This is useful for development, integration testing, or verifying your test scripts **before committing to `main`**, which will trigger GitHub Actions to build and publish the Docker image.
 
@@ -72,7 +96,7 @@ This is the service under test, which must expose a `/health` endpoint and liste
 docker compose up --build
 ```
 
-## Local Testing with LocalStack
+## Local Testing with LocalStack - Not applicable for ahwr-performance tests
 
 ### Build a new Docker image
 ```

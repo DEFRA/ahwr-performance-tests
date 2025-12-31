@@ -51,7 +51,7 @@ services:
       - performance-tests
 
   service:
-    # replace service-name with the name of your service being performace tested
+    # replace service-name with the name of your service being performance tested
     image: defradigital/service-name:${SERVICE_VERSION:-latest}
     ports:
       - '3000:3000'
