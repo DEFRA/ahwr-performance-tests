@@ -26,7 +26,7 @@ Make sure you have the following set in your .env file:
 - DEVELOPER_API_KEY = <API key value for the logged-in user from CDP portal>
 - TEST_SCENARIO=ahwr-performance-tests (This is the jmx file name present in scenarios folder)
 
-Now update the user-properties file for the following :
+Now update the user-properties file for the following:
 - thread_count=1
 - ramp_up_seconds=1
 - duration_seconds=30
