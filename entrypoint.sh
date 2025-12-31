@@ -22,6 +22,7 @@ mkdir -p ${JM_REPORTS} ${JM_LOGS}
 
 TEST_SCENARIO=${TEST_SCENARIO:-test}
 SCENARIOFILE=${JM_SCENARIOS}/${TEST_SCENARIO}.jmx
+USER_PROPERTIES="user.properties"
 REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
 LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
@@ -43,6 +44,7 @@ jmeter -n \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
 -Jprotocol="${SERVICE_URL_SCHEME}"
+test_exit_code=$?
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
