@@ -13,7 +13,6 @@ DEVELOPER_API_KEY="${DEVELOPER_API_KEY:-}"
 #  retrieve SBIs from scenarios/test-data.csv
 SBIS=$(sed '1d; s/^/sbi=/' scenarios/test-data.csv | paste -sd '&' -)
 
-
 CURL_OPTS=(-s -w "%{http_code}")
 
 # Add API key header only when running locally
@@ -27,9 +26,6 @@ response=$(curl "${CURL_OPTS[@]}" -X DELETE "${API_URL}/api/cleanup?${SBIS}")
 
 # Extract last 3 digits as HTTP status
 HTTP_STATUS="${response: -3}"   # last 3 characters
-
-# Optionally trim whitespace/newlines
-HTTP_BODY="$(echo -e "${HTTP_BODY}" | sed -e 's/^[[:space:]]*//;s/[[:space:]]*$//')"
 
 if [ "$HTTP_STATUS" -ne 204 ]; then
     echo "Cleanup failed (HTTP $HTTP_STATUS)"
