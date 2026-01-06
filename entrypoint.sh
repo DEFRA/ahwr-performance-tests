@@ -45,7 +45,7 @@ jmeter -n \
 -JUSER_PAGE_DELAY="${USER_PAGE_DELAY}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
--Jprotocol="${SERVICE_URL_SCHEME}" \
+-Jprotocol="${SERVICE_URL_SCHEME}"
 test_exit_code=$?
 
 cat ${LOGFILE}
