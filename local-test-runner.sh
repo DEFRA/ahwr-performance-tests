@@ -54,5 +54,10 @@ jmeter -n \
 -Jprotocol="$SERVICE_URL_SCHEME"
 test_exit_code=$?
 
-echo "JMeter run completed successfully"
+if [ "$test_exit_code" -eq 0 ]; then
+  echo "JMeter run completed successfully"
+else
+  echo "JMeter run failed with exit code $test_exit_code"
+fi
+
 exit $test_exit_code
