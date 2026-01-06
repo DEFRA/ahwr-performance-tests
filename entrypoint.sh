@@ -4,9 +4,7 @@ set -x
 echo "run_id: $RUN_ID in $ENVIRONMENT"
 
 # Cleanup of SBIs from previous runs
-if [ -x "./cleanup.sh" ]; then
-    ./cleanup.sh
-fi
+./cleanup.sh
 
 NOW=$(date +"%Y%m%d-%H%M%S")
 
@@ -44,9 +42,11 @@ jmeter -n \
 -JRAMPUP_SECONDS="${RAMPUP_SECONDS}" \
 -JTHREAD_COUNT="${THREAD_COUNT}" \
 -JDURATION_SECONDS="${DURATION_SECONDS}" \
+-JUSER_PAGE_DELAY="${USER_PAGE_DELAY}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
--Jprotocol="${SERVICE_URL_SCHEME}" 
+-Jprotocol="${SERVICE_URL_SCHEME}" \
+-j /dev/stdout
 test_exit_code=$?
 
 # Publish the results into S3 so they can be displayed in the CDP Portal

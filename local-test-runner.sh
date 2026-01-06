@@ -49,9 +49,11 @@ jmeter -n \
 -JRAMPUP_SECONDS="${RAMPUP_SECONDS}" \
 -JTHREAD_COUNT="${THREAD_COUNT}" \
 -JDURATION_SECONDS="${DURATION_SECONDS}" \
+-JUSER_PAGE_DELAY="${USER_PAGE_DELAY}" \
 -Jdomain="$SERVICE_ENDPOINT" \
 -Jport="$SERVICE_PORT" \
--Jprotocol="$SERVICE_URL_SCHEME"
+-Jprotocol="$SERVICE_URL_SCHEME" \
+-j /dev/stdout
 test_exit_code=$?
 
 if [ "$test_exit_code" -eq 0 ]; then
