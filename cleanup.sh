@@ -7,6 +7,8 @@ if [ -f .env ]; then
     set +a
 fi
 
+echo "ENVIRONMENT in cleanup file $ENVIRONMENT"
+
 API_URL="https://ahwr-application-backend.$ENVIRONMENT.cdp-int.defra.cloud"
 DEVELOPER_API_KEY="${DEVELOPER_API_KEY:-}"
 
@@ -20,6 +22,8 @@ if [ "$RUN_ENVIRONMENT" = "local" ]; then
     CURL_OPTS+=(-H "x-api-key: $DEVELOPER_API_KEY")
     API_URL="https://ephemeral-protected.api.$ENVIRONMENT.cdp-int.defra.cloud/ahwr-application-backend"
 fi
+
+echo "API_URL in cleanup file $API_URL"
 
 # Run curl, append status code to body
 response=$(curl "${CURL_OPTS[@]}" -X DELETE "${API_URL}/api/cleanup?${SBIS}")

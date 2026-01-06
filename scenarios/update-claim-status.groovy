@@ -6,6 +6,9 @@ import java.net.HttpURLConnection
 def env = System.getenv('ENVIRONMENT') ?: 'perf-test'
 def runEnv = System.getenv('RUN_ENVIRONMENT') ?: 'perf-test'
 
+log.info("status update env is : ${env}")
+log.info("status update runEnv is : ${runEnv}")
+
 // Use DEVELOPER_API_KEY only for local
 def apiKeyHeader = ''
 def apiUrl = "https://ahwr-application-backend.${env}.cdp-int.defra.cloud/ahwr-application-backend"
@@ -16,12 +19,16 @@ if (runEnv == 'local') {
     apiUrl = "https://ephemeral-protected.api.${env}.cdp-int.defra.cloud/ahwr-application-backend"
 }
 
+log.info("The status update apiUrl is : ${apiUrl}")
+
 // Get claimReference from previous extractor
 def reference = vars.get('claimReference')
 if (!reference || reference == 'NOT_FOUND') {
     log.warn('claimReference is missing for this iteration, skipping status change request')
     return
 }
+
+log.info("The claim reference is : ${reference}")
 
 // Prepare payload
 def payload = [

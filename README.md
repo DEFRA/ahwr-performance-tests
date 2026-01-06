@@ -36,6 +36,7 @@ Make sure the following environments values are set in the .env file:
 - THREAD_COUNT=1
 - RAMPUP_SECONDS=1
 - DURATION_SECONDS=30
+- USER_PAGE_DELAY=500
 
 Now run the command in a terminal from the project directory
 
