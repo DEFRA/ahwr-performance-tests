@@ -46,8 +46,9 @@ jmeter -n \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
 -Jprotocol="${SERVICE_URL_SCHEME}" \
--j /dev/stdout
 test_exit_code=$?
+
+cat ${LOGFILE}
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
