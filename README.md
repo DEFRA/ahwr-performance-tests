@@ -27,7 +27,7 @@ These values can be adjusted to support different load profiles, including load 
 ## Local test execution for an environment
 Install Jmeter on the local machine if you need to open and edit the jmx file from this repo in Jmeter UI.
 
-Make sure you the following environments values are set in the .env file:
+Make sure the following environments values are set in the .env file:
 
 - ENVIRONMENT=perf-test
 - RUN_ENVIRONMENT=local
