@@ -3,13 +3,19 @@ set -x
 
 echo "run_id: $RUN_ID in $ENVIRONMENT"
 
-# Cleanup of SBIs from previous runs
-./cleanup.sh
-
 NOW=$(date +"%Y%m%d-%H%M%S")
 
 if [ -z "${JM_HOME}" ]; then
     JM_HOME=/opt/perftest
+fi
+
+CLEANUP_SCRIPT="${JM_HOME}/cleanup.sh"
+
+# Cleanup of SBIs from previous runs
+if [ -x "$CLEANUP_SCRIPT" ]; then
+    "$CLEANUP_SCRIPT"
+else
+    echo "Cleanup script not found or not executable: $CLEANUP_SCRIPT"
 fi
 
 JM_SCENARIOS=${JM_HOME}/scenarios
