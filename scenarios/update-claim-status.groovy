@@ -1,4 +1,4 @@
-/* groovylint-disable UnnecessaryGroovyImport, VariableTypeRequired */
+/* groovylint-disable DuplicateStringLiteral, UnnecessaryGroovyImport, VariableTypeRequired */
 import groovy.json.JsonOutput
 import java.net.HttpURLConnection
 
@@ -11,7 +11,7 @@ log.info("status update runEnv is : ${runEnv}")
 
 // Use DEVELOPER_API_KEY only for local
 def apiKeyHeader = ''
-def apiUrl = "https://ahwr-application-backend.${env}.cdp-int.defra.cloud/ahwr-application-backend"
+def apiUrl = "https://ahwr-application-backend.${env}.cdp-int.defra.cloud"
 
 if (runEnv == 'local') {
     def devApiKey = System.getenv('DEVELOPER_API_KEY') ?: ''
@@ -22,13 +22,13 @@ if (runEnv == 'local') {
 log.info("The status update apiUrl is : ${apiUrl}")
 
 // Get claimReference from previous extractor
-def reference = vars.get('claimReference')
+def reference = vars.get('claimReference') ?: props.get('claimReference')
+log.info("The claim reference to update status for is : ${reference}")
+
 if (!reference || reference == 'NOT_FOUND') {
     log.warn('claimReference is missing for this iteration, skipping status change request')
     return
 }
-
-log.info("The claim reference is : ${reference}")
 
 // Prepare payload
 def payload = [
