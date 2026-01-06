@@ -20,7 +20,7 @@ JM_LOGS=${JM_HOME}/logs
 
 mkdir -p ${JM_REPORTS} ${JM_LOGS}
 
-TEST_SCENARIO=${TEST_SCENARIO:-test}
+TEST_SCENARIO=${TEST_SCENARIO:-ahwr-performance-tests}
 SCENARIOFILE=${JM_SCENARIOS}/${TEST_SCENARIO}.jmx
 USER_PROPERTIES="user.properties"
 REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
@@ -40,10 +40,13 @@ jmeter -n \
 -e -l "${REPORTFILE}" \
 -o ${JM_REPORTS} \
 -j ${LOGFILE} -f \
--Jenv="${ENVIRONMENT}" \
+-JENVIRONMENT="${ENVIRONMENT}" \
+-JRAMPUP_SECONDS="${RAMPUP_SECONDS}" \
+-JTHREAD_COUNT="${THREAD_COUNT}" \
+-JDURATION_SECONDS="${DURATION_SECONDS}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
--Jprotocol="${SERVICE_URL_SCHEME}"
+-Jprotocol="${SERVICE_URL_SCHEME}" 
 test_exit_code=$?
 
 # Publish the results into S3 so they can be displayed in the CDP Portal

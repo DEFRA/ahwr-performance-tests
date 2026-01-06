@@ -16,20 +16,26 @@ A successful build results in a Docker container that is capable of running your
 The performance test suites are designed to be run from the CDP Portal.
 The CDP Platform runs test suites in much the same way it runs any other service, it takes a docker image and runs it as an ECS task, automatically provisioning infrastructure as required.
 
+**Environment variables set in CDP portal for a standard run:**
+```bash
+THREAD_COUNT=40
+RAMPUP_SECONDS=10
+DURATION_SECONDS=240
+```
+These values can be adjusted to support different load profiles, including load and soak testing scenarios.
+
 ## Local test execution for an environment
 Install Jmeter on the local machine if you need to open and edit the jmx file from this repo in Jmeter UI.
 
-Make sure you have the following set in your .env file:
+Make sure the following environments values are set in the .env file:
 
 - ENVIRONMENT=perf-test
 - RUN_ENVIRONMENT=local
-- DEVELOPER_API_KEY = <API key value for the logged-in user from CDP portal>
+- DEVELOPER_API_KEY = API key value for the logged-in user from CDP portal
 - TEST_SCENARIO=ahwr-performance-tests (This is the jmx file name present in scenarios folder)
-
-Now update the user-properties file for the following:
-- thread_count=1
-- ramp_up_seconds=1
-- duration_seconds=30
+- THREAD_COUNT=1
+- RAMPUP_SECONDS=1
+- DURATION_SECONDS=30
 
 Now run the command in a terminal from the project directory
 
@@ -37,7 +43,9 @@ Now run the command in a terminal from the project directory
 sh ./local-test-runner.sh
 ```
 
-The test will run for 30 seconds with a single user, according to the configuration above. Running tests with a high load on a local environment is not recommended. Local execution should be limited to scripting and debugging. After the test completes, an HTML report can be found in the reports folder.
+The test runs locally for 30 seconds with a single virtual user, based on the configuration above. High-load testing is not recommended in a local environment; local execution should be used only for scripting and debugging purposes. Once the test finishes, an HTML report is generated in the reports folder.
+
+# The sections below are not relevant to AHWR performance tests and come from the template repository.
 
 ## Local Testing with Docker Compose - Not applicable for ahwr-performance tests
 

@@ -44,10 +44,20 @@ jmeter -n \
 -p "$USER_PROPERTIES" \
 -l "$LOCAL_RESULTS_FILE" \
 -e -o "$LOCAL_REPORTS_DIR" \
--Jenv="$ENVIRONMENT" \
+-JENVIRONMENT="$ENVIRONMENT" \
+-JRUN_ENVIRONMENT="$RUN_ENVIRONMENT" \
+-JRAMPUP_SECONDS="${RAMPUP_SECONDS}" \
+-JTHREAD_COUNT="${THREAD_COUNT}" \
+-JDURATION_SECONDS="${DURATION_SECONDS}" \
 -Jdomain="$SERVICE_ENDPOINT" \
 -Jport="$SERVICE_PORT" \
 -Jprotocol="$SERVICE_URL_SCHEME"
+test_exit_code=$?
 
-echo "JMeter run completed successfully"
-exit 0
+if [ "$test_exit_code" -eq 0 ]; then
+  echo "JMeter run completed successfully"
+else
+  echo "JMeter run failed with exit code $test_exit_code"
+fi
+
+exit $test_exit_code
