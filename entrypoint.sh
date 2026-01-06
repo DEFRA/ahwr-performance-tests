@@ -45,9 +45,10 @@ jmeter -n \
 -JUSER_PAGE_DELAY="${USER_PAGE_DELAY}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
--Jprotocol="${SERVICE_URL_SCHEME}" \
--j /dev/stdout
+-Jprotocol="${SERVICE_URL_SCHEME}"
 test_exit_code=$?
+
+cat ${LOGFILE}
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
