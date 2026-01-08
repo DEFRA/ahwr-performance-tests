@@ -28,7 +28,7 @@
         <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
       </DNSCacheManager>
       <hashTree/>
-      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
         <collectionProp name="Asserion.test_strings">
           <stringProp name="49586">200</stringProp>
         </collectionProp>
@@ -38,7 +38,7 @@
         <intProp name="Assertion.test_type">8</intProp>
       </ResponseAssertion>
       <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="filename">test-data.csv</stringProp>
@@ -97,6 +97,11 @@
             <stringProp name="Argument.value">${__P(USER_PAGE_DELAY, 3500)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="LOOP_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">LOOP_COUNT</stringProp>
+            <stringProp name="Argument.value">${__P(LOOP_COUNT, 1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </Arguments>
       <hashTree/>
@@ -104,7 +109,7 @@
         <stringProp name="ConstantTimer.delay">${USER_PAGE_DELAY}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ahwr-journeys" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ahwr-journeys">
         <stringProp name="ThreadGroup.num_threads">${THREAD_COUNT}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${RAMPUP_SECONDS}</stringProp>
         <stringProp name="ThreadGroup.duration">${DURATION_SECONDS}</stringProp>
@@ -113,7 +118,7 @@
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController">
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">${LOOP_COUNT}</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -401,7 +406,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET check-details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET check-details" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -415,7 +420,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb">
+            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb" enabled="true">
               <stringProp name="XPathExtractor.default"></stringProp>
               <stringProp name="XPathExtractor.refname">CRUMB</stringProp>
               <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
@@ -425,7 +430,7 @@
               <boolProp name="XPathExtractor.namespace">false</boolProp>
             </XPathExtractor>
             <hashTree/>
-            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion">
+            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -952,7 +957,7 @@ assert vars.get(&apos;CRUMB&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract Claim Reference">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract Claim Reference" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">claimReference</stringProp>
               <stringProp name="RegexExtractor.regex">&lt;strong id=reference&gt;([^&lt;]+)&lt;/strong&gt;</stringProp>
@@ -962,7 +967,7 @@ assert vars.get(&apos;CRUMB&apos;) != &apos;&apos;
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Move Claim To Ready To Pay">
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Move Claim To Ready To Pay" enabled="true">
               <stringProp name="scriptLanguage">groovy</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename">${TEST_PLAN_DIR}/update-claim-status.groovy</stringProp>
@@ -1050,7 +1055,7 @@ assert vars.get(&apos;CRUMB&apos;) != &apos;&apos;
               <boolProp name="XPathExtractor.namespace">false</boolProp>
             </XPathExtractor>
             <hashTree/>
-            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion">
+            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
