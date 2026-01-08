@@ -16,11 +16,13 @@ A successful build results in a Docker container that is capable of running your
 The performance test suites are designed to be run from the CDP Portal.
 The CDP Platform runs test suites in much the same way it runs any other service, it takes a docker image and runs it as an ECS task, automatically provisioning infrastructure as required.
 
-**Environment variables set in CDP portal for a standard run:**
+**Environment variables and their values set in CDP portal for a standard run:**
 ```bash
 THREAD_COUNT=40
 RAMPUP_SECONDS=10
 DURATION_SECONDS=240
+USER_PAGE_DELAY=3500
+LOOP_COUNT=1
 ```
 These values can be adjusted to support different load profiles, including load and soak testing scenarios.
 
@@ -37,6 +39,7 @@ Make sure the following environments values are set in the .env file:
 - RAMPUP_SECONDS=1
 - DURATION_SECONDS=30
 - USER_PAGE_DELAY=500
+- LOOP_COUNT=1
 
 Now run the command in a terminal from the project directory
 
