@@ -1,6 +1,6 @@
 # ahwr-performance-tests
 
-This repository contains the performance test suite for AHWR services. 
+This repository contains the performance test suite for AHWR public ui service. 
 Tests are executed using a JMeter-based runner within the CDP Platform.
 
 - [Licence](#licence)
@@ -23,6 +23,8 @@ RAMPUP_SECONDS=10
 DURATION_SECONDS=240
 USER_PAGE_DELAY=3500
 LOOP_COUNT=1
+CSV_RECYCLE_ON_EOF=false
+CSV_STOP_ON_EOF=true
 ```
 These values can be adjusted to support different load profiles, including load and soak testing scenarios.
 
@@ -40,6 +42,8 @@ Make sure the following environments values are set in the .env file:
 - DURATION_SECONDS=30
 - USER_PAGE_DELAY=500
 - LOOP_COUNT=1
+- CSV_RECYCLE_ON_EOF=false
+- CSV_STOP_ON_EOF=true
 
 Now run the command in a terminal from the project directory
 
@@ -47,7 +51,7 @@ Now run the command in a terminal from the project directory
 sh ./local-test-runner.sh
 ```
 
-The test runs locally for 30 seconds with a single virtual user, based on the configuration above. High-load testing is not recommended in a local environment; local execution should be used only for scripting and debugging purposes. Once the test finishes, an HTML report is generated in the reports folder.
+The test runs locally for 30 seconds with a single user, based on the configuration above. High-load testing is not recommended in a local environment; local execution should be used only for scripting and debugging purposes. Once the test finishes, an HTML report is generated in the reports folder.
 
 # The sections below are not relevant to AHWR performance tests and come from the template repository.
 
