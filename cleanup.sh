@@ -11,6 +11,7 @@ echo "ENVIRONMENT in cleanup file $ENVIRONMENT"
 
 API_URL="https://ahwr-application-backend.$ENVIRONMENT.cdp-int.defra.cloud"
 DEVELOPER_API_KEY="${DEVELOPER_API_KEY:-}"
+TESTS_UI_API_KEY="${TESTS_UI_API_KEY:-}"
 
 #  retrieve SBIs from scenarios/test-data.csv
 SBIS=$(sed '1d; s/^/sbi=/' scenarios/test-data.csv | paste -sd '&' -)
@@ -21,6 +22,8 @@ CURL_OPTS=(-s -w "%{http_code}")
 if [ "$RUN_ENVIRONMENT" = "local" ]; then
     CURL_OPTS+=(-H "x-api-key: $DEVELOPER_API_KEY")
     API_URL="https://ephemeral-protected.api.$ENVIRONMENT.cdp-int.defra.cloud/ahwr-application-backend"
+else
+    CURL_OPTS+=(-H "x-api-key: $TESTS_UI_API_KEY")
 fi
 
 echo "API_URL in cleanup file $API_URL"
