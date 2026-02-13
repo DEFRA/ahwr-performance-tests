@@ -17,6 +17,9 @@ if (runEnv == 'local') {
     def devApiKey = System.getenv('DEVELOPER_API_KEY') ?: ''
     apiKeyHeader = devApiKey
     apiUrl = "https://ephemeral-protected.api.${env}.cdp-int.defra.cloud/ahwr-application-backend"
+} else {
+    def testsUiApiKey = System.getenv('TESTS_UI_API_KEY') ?: ''
+    apiKeyHeader = testsUiApiKey
 }
 
 log.info("The status update apiUrl is : ${apiUrl}")
