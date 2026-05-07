@@ -12,9 +12,8 @@ echo "ENVIRONMENT in cleanup file $ENVIRONMENT"
 API_URL="https://ahwr-application-backend.$ENVIRONMENT.cdp-int.defra.cloud"
 DEVELOPER_API_KEY="${DEVELOPER_API_KEY:-}"
 TESTS_UI_API_KEY="${TESTS_UI_API_KEY:-}"
-
-#  retrieve SBIs from scenarios/test-data.csv
-SBIS=$(sed '1d; s/^/sbi=/' scenarios/test-data.csv | paste -sd '&' -)
+LIVESTOCK_SBIs=$(sed '1d; s/^/sbi=/' scenarios/livestock-test-data.csv | paste -sd '&' -)
+POULTRY_SBIs=$(sed '1d; s/^/sbi=/' scenarios/poultry-test-data.csv | paste -sd '&' -)
 
 CURL_OPTS=(-s -w "%{http_code}")
 
@@ -28,15 +27,20 @@ fi
 
 echo "API_URL in cleanup file $API_URL"
 
-# Run curl, append status code to body
-response=$(curl "${CURL_OPTS[@]}" -X DELETE "${API_URL}/api/cleanup?${SBIS}")
-
-# Extract last 3 digits as HTTP status
-HTTP_STATUS="${response: -3}"   # last 3 characters
-
+# Livestock SBIs cleanup
+response=$(curl "${CURL_OPTS[@]}" -X DELETE "${API_URL}/api/cleanup?${LIVESTOCK_SBIs}")
+HTTP_STATUS="${response: -3}"
 if [ "$HTTP_STATUS" -ne 204 ]; then
-    echo "Cleanup failed (HTTP $HTTP_STATUS)"
+    echo "Livestock SBIs cleanup failed (HTTP $HTTP_STATUS)"
     exit 1
 fi
+echo "Livestock SBIs cleanup completed successfully"
 
-echo "Cleanup completed successfully"
+# Poultry SBIs cleanup
+response=$(curl "${CURL_OPTS[@]}" -X DELETE "${API_URL}/api/cleanup?${POULTRY_SBIs}")
+HTTP_STATUS="${response: -3}"
+if [ "$HTTP_STATUS" -ne 204 ]; then
+    echo "Poultry SBIs cleanup failed (HTTP $HTTP_STATUS)"
+    exit 1
+fi
+echo "Poultry SBIs cleanup completed successfully"
