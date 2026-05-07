@@ -13,20 +13,20 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
         <boolProp name="clearEachIteration">true</boolProp>
         <boolProp name="useExpires">false</boolProp>
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
       </CacheManager>
       <hashTree/>
-      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager">
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
         <collectionProp name="DNSCacheManager.servers"/>
         <collectionProp name="DNSCacheManager.hosts"/>
         <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
         <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
       </DNSCacheManager>
       <hashTree/>
-      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
         <collectionProp name="Asserion.test_strings">
           <stringProp name="49586">200</stringProp>
         </collectionProp>
@@ -36,7 +36,7 @@
         <intProp name="Assertion.test_type">8</intProp>
       </ResponseAssertion>
       <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="TEST_PLAN_DIR" elementType="Argument">
             <stringProp name="Argument.name">TEST_PLAN_DIR</stringProp>
@@ -101,7 +101,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="User Page Delay">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="User Page Delay" enabled="true">
         <stringProp name="ConstantTimer.delay">${USER_PAGE_DELAY}</stringProp>
       </ConstantTimer>
       <hashTree/>
@@ -126,16 +126,16 @@
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <stringProp name="recycle">${CSV_RECYCLE_ON_EOF}</stringProp>
-          <stringProp name="shareMode">shareMode.all</stringProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
           <stringProp name="stopThread">${CSV_STOP_ON_EOF}</stringProp>
           <stringProp name="variableNames">SBI</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="apply">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="apply" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET dev-landing-page">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET dev-landing-page" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -149,7 +149,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST dev-landing-page">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST dev-landing-page" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -185,7 +185,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb">
+            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb" enabled="true">
               <stringProp name="XPathExtractor.default"></stringProp>
               <stringProp name="XPathExtractor.refname">CRUMB</stringProp>
               <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
@@ -196,7 +196,7 @@
             </XPathExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-details" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -225,7 +225,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -254,7 +254,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST you-can-claim-multiple">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST you-can-claim-multiple" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -341,7 +341,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST declaration">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST declaration" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -377,7 +377,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Reference Number Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Reference Number Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="69425382">IAHW-</stringProp>
               </collectionProp>
@@ -388,7 +388,7 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET vet-visits">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET vet-visits" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -403,675 +403,7 @@
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="beef-review-claim">
-          <boolProp name="TransactionController.includeTimers">false</boolProp>
-        </TransactionController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET dev-landing-page">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/dev-landing-page</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST dev-landing-page" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/dev-landing-page</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="sbi" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">sbi</stringProp>
-                  <stringProp name="Argument.value">${SBI}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET check-details" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/check-details</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb" enabled="true">
-              <stringProp name="XPathExtractor.default"></stringProp>
-              <stringProp name="XPathExtractor.refname">CRUMB</stringProp>
-              <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
-              <stringProp name="XPathExtractor.xpathQuery">//input[@name=&apos;crumb&apos;]/@value</stringProp>
-              <boolProp name="XPathExtractor.validate">false</boolProp>
-              <boolProp name="XPathExtractor.tolerant">true</boolProp>
-              <boolProp name="XPathExtractor.namespace">false</boolProp>
-            </XPathExtractor>
-            <hashTree/>
-            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
-              <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="filename"></stringProp>
-              <stringProp name="parameters"></stringProp>
-              <stringProp name="script">assert vars.get(&apos;CRUMB&apos;) != null
-assert vars.get(&apos;CRUMB&apos;) != &apos;&apos;
-</stringProp>
-              <stringProp name="scriptLanguage">groovy</stringProp>
-            </JSR223Assertion>
-            <hashTree/>
-          </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-details">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/check-details</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="confirmCheckDetails" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">confirmCheckDetails</stringProp>
-                  <stringProp name="Argument.value">yes</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/select-funding</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="fundingType" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">fundingType</stringProp>
-                  <stringProp name="Argument.value">IAHW</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET which-species">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/which-species</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST which-species">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/which-species</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="typeOfLivestock" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">typeOfLivestock</stringProp>
-                  <stringProp name="Argument.value">beef</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST which-type-of-review">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/which-type-of-review</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="typeOfReview" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">typeOfReview</stringProp>
-                  <stringProp name="Argument.value">review</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST date-of-visit">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/date-of-visit</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="visit-date-day" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">visit-date-day</stringProp>
-                  <stringProp name="Argument.value">${__time(dd)}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="visit-date-month" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.value">${__time(MM)}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">visit-date-month</stringProp>
-                </elementProp>
-                <elementProp name="visit-date-year" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyy)}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">visit-date-year</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST enter-herd-name" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/enter-herd-name</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="herdName" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">herdName</stringProp>
-                  <stringProp name="Argument.value">beefers</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST enter-cph-number">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/enter-cph-number</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="herdCph" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">herdCph</stringProp>
-                  <stringProp name="Argument.value">12/468/5333</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST herd-others-on-sbi" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/herd-others-on-sbi</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="isOnlyHerdOnSbi" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">isOnlyHerdOnSbi</stringProp>
-                  <stringProp name="Argument.value">no</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST enter-herd-details">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/enter-herd-details</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="herdReasons" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">herdReasons</stringProp>
-                  <stringProp name="Argument.value">separateManagementNeeds,differentBreed</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-herd-details" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/check-herd-details</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST date-of-testing" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/date-of-testing</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="dateOfAgreementAccepted" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">dateOfAgreementAccepted</stringProp>
-                  <stringProp name="Argument.value">${__time(yyyy-MM-dd)}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="dateOfVisit" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.value">${__time(yyyy-MM-dd&apos;T&apos;00:00:00.000&apos;Z&apos;,)}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">dateOfVisit</stringProp>
-                </elementProp>
-                <elementProp name="whenTestingWasCarriedOut" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">whenTheVetVisitedTheFarmToCarryOutTheReview</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">whenTestingWasCarriedOut</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST species-numbers">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/species-numbers</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="speciesNumbers" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">speciesNumbers</stringProp>
-                  <stringProp name="Argument.value">yes</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST number-of-species-tested">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/number-of-species-tested</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="numberAnimalsTested" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">numberAnimalsTested</stringProp>
-                  <stringProp name="Argument.value">10</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST vet-name" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/vet-name</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="vetsName" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">vetsName</stringProp>
-                  <stringProp name="Argument.value">test vet</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST vet-rcvs">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/vet-rcvs</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="HTTPArgument.content_type">text/plain</stringProp>
-                </elementProp>
-                <elementProp name="vetRCVSNumber" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">vetRCVSNumber</stringProp>
-                  <stringProp name="Argument.value">3333443</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="HTTPArgument.content_type">text/plain</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST test-urn">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/test-urn</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="laboratoryURN" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">laboratoryURN</stringProp>
-                  <stringProp name="Argument.value">urn-beef-review-234</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST test-results">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/test-results</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="testResults" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">testResults</stringProp>
-                  <stringProp name="Argument.value">positive</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-answers" enabled="true">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/check-answers</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="crumb" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">crumb</stringProp>
-                  <stringProp name="Argument.value">${CRUMB}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-                <elementProp name="testResults" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
-                  <stringProp name="Argument.name">testResults</stringProp>
-                  <stringProp name="Argument.value">positive</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract Claim Reference">
-              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-              <stringProp name="RegexExtractor.refname">claimReference</stringProp>
-              <stringProp name="RegexExtractor.regex">&lt;strong id=reference&gt;([^&lt;]+)&lt;/strong&gt;</stringProp>
-              <stringProp name="RegexExtractor.template">$1$</stringProp>
-              <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
-              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
-              <stringProp name="RegexExtractor.match_number">1</stringProp>
-            </RegexExtractor>
-            <hashTree/>
-            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Move Claim To Ready To Pay">
-              <stringProp name="scriptLanguage">groovy</stringProp>
-              <stringProp name="parameters"></stringProp>
-              <stringProp name="filename">${TEST_PLAN_DIR}/update-claim-status.groovy</stringProp>
-              <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script"></stringProp>
-            </JSR223PostProcessor>
-            <hashTree/>
-          </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET vet-visits">
-            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
-            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-            <stringProp name="HTTPSampler.path">/vet-visits</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-        </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="beef-follow-up-claim">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="beef-review-claim" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -1175,7 +507,675 @@ assert vars.get(&apos;CRUMB&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/select-funding</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="fundingType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">fundingType</stringProp>
+                  <stringProp name="Argument.value">IAHW</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET which-species" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/which-species</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST which-species" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/which-species</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="typeOfLivestock" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">typeOfLivestock</stringProp>
+                  <stringProp name="Argument.value">beef</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST which-type-of-review" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/which-type-of-review</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="typeOfReview" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">typeOfReview</stringProp>
+                  <stringProp name="Argument.value">review</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST date-of-visit" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/date-of-visit</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="visit-date-day" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">visit-date-day</stringProp>
+                  <stringProp name="Argument.value">${__time(dd)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="visit-date-month" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">${__time(MM)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">visit-date-month</stringProp>
+                </elementProp>
+                <elementProp name="visit-date-year" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">${__time(yyyy)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">visit-date-year</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST enter-herd-name" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/enter-herd-name</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="herdName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">herdName</stringProp>
+                  <stringProp name="Argument.value">beefers</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST enter-cph-number" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/enter-cph-number</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="herdCph" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">herdCph</stringProp>
+                  <stringProp name="Argument.value">12/468/5333</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST herd-others-on-sbi" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/herd-others-on-sbi</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="isOnlyHerdOnSbi" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">isOnlyHerdOnSbi</stringProp>
+                  <stringProp name="Argument.value">no</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST enter-herd-details" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/enter-herd-details</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="herdReasons" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">herdReasons</stringProp>
+                  <stringProp name="Argument.value">separateManagementNeeds,differentBreed</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-herd-details" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/check-herd-details</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST date-of-testing" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/date-of-testing</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="dateOfAgreementAccepted" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">dateOfAgreementAccepted</stringProp>
+                  <stringProp name="Argument.value">${__time(yyyy-MM-dd)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="dateOfVisit" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">${__time(yyyy-MM-dd&apos;T&apos;00:00:00.000&apos;Z&apos;,)}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">dateOfVisit</stringProp>
+                </elementProp>
+                <elementProp name="whenTestingWasCarriedOut" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">whenTheVetVisitedTheFarmToCarryOutTheReview</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">whenTestingWasCarriedOut</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST species-numbers" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/species-numbers</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="speciesNumbers" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">speciesNumbers</stringProp>
+                  <stringProp name="Argument.value">yes</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST number-of-species-tested" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/number-of-species-tested</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="numberAnimalsTested" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">numberAnimalsTested</stringProp>
+                  <stringProp name="Argument.value">10</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST vet-name" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/vet-name</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="vetsName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">vetsName</stringProp>
+                  <stringProp name="Argument.value">test vet</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST vet-rcvs" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/vet-rcvs</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="HTTPArgument.content_type">text/plain</stringProp>
+                </elementProp>
+                <elementProp name="vetRCVSNumber" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">vetRCVSNumber</stringProp>
+                  <stringProp name="Argument.value">3333443</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="HTTPArgument.content_type">text/plain</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST test-urn" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/test-urn</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="laboratoryURN" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">laboratoryURN</stringProp>
+                  <stringProp name="Argument.value">urn-beef-review-234</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST test-results" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/test-results</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="testResults" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">testResults</stringProp>
+                  <stringProp name="Argument.value">positive</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-answers" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/check-answers</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="testResults" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">testResults</stringProp>
+                  <stringProp name="Argument.value">positive</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract Claim Reference" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">claimReference</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;strong id=reference&gt;([^&lt;]+)&lt;/strong&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Move Claim To Ready To Pay" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename">${TEST_PLAN_DIR}/update-claim-status.groovy</stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script"></stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET vet-visits" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/vet-visits</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="beef-follow-up-claim" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET dev-landing-page" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/dev-landing-page</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST dev-landing-page" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/dev-landing-page</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sbi" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sbi</stringProp>
+                  <stringProp name="Argument.value">${SBI}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET check-details" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/check-details</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb" enabled="true">
+              <stringProp name="XPathExtractor.default"></stringProp>
+              <stringProp name="XPathExtractor.refname">CRUMB</stringProp>
+              <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
+              <stringProp name="XPathExtractor.xpathQuery">//input[@name=&apos;crumb&apos;]/@value</stringProp>
+              <boolProp name="XPathExtractor.validate">false</boolProp>
+              <boolProp name="XPathExtractor.tolerant">true</boolProp>
+              <boolProp name="XPathExtractor.namespace">false</boolProp>
+            </XPathExtractor>
+            <hashTree/>
+            <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">assert vars.get(&apos;CRUMB&apos;) != null
+assert vars.get(&apos;CRUMB&apos;) != &apos;&apos;
+</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223Assertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-details" enabled="true">
+            <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
+            <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+            <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+            <stringProp name="HTTPSampler.path">/check-details</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">crumb</stringProp>
+                  <stringProp name="Argument.value">${CRUMB}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="confirmCheckDetails" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">confirmCheckDetails</stringProp>
+                  <stringProp name="Argument.value">yes</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1762,7 +1762,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <stringProp name="recycle">${CSV_RECYCLE_ON_EOF}</stringProp>
-          <stringProp name="shareMode">shareMode.thread</stringProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
           <stringProp name="stopThread">${CSV_STOP_ON_EOF}</stringProp>
           <stringProp name="variableNames">SBI</stringProp>
         </CSVDataSet>
@@ -1771,7 +1771,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET dev-landing-page">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET dev-landing-page" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1785,7 +1785,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST dev-landing-page">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST dev-landing-page" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1807,7 +1807,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET check-details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET check-details" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1821,7 +1821,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb">
+            <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="Extract Crumb" enabled="true">
               <stringProp name="XPathExtractor.default"></stringProp>
               <stringProp name="XPathExtractor.refname">CRUMB</stringProp>
               <stringProp name="XPathExtractor.matchNumber">-1</stringProp>
@@ -1832,7 +1832,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </XPathExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST check-details" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1861,7 +1861,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST select-funding" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1890,7 +1890,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/you-can-claim-multiple">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/you-can-claim-multiple" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1919,7 +1919,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/numbers">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/numbers" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1948,7 +1948,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/timings">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/timings" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -1977,7 +1977,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/declaration">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/declaration" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2013,7 +2013,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Reference Number Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Reference Number Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="76319255">POUL-</stringProp>
               </collectionProp>
@@ -2024,7 +2024,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET poultry/vet-visits">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET poultry/vet-visits" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2038,7 +2038,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET poultry/date-of-visit?journey=new">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET poultry/date-of-visit?journey=new" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2060,7 +2060,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/date-of-visit?journey=new">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/date-of-visit?journey=new" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2103,7 +2103,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/enter-site-name">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/enter-site-name" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2132,7 +2132,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/enter-cph-number">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/enter-cph-number" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2161,7 +2161,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/site-others-on-sbi">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/site-others-on-sbi" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2190,7 +2190,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/select-poultry-type">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/select-poultry-type" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2219,7 +2219,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/minimum-number-of-birds">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/minimum-number-of-birds" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2248,7 +2248,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/vet-name">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/vet-name" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2277,7 +2277,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/vet-rcvs">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/vet-rcvs" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2306,7 +2306,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/biosecurity">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/biosecurity" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2335,7 +2335,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/biosecurity-usefulness">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/biosecurity-usefulness" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2364,7 +2364,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/changes-in-biosecurity">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/changes-in-biosecurity" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2393,7 +2393,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/cost-of-changes">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/cost-of-changes" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2422,7 +2422,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/interview">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/interview" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2451,7 +2451,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/check-answers">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/check-answers" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
@@ -2473,7 +2473,7 @@ assert vars.get(&apos;HERD_SELECTED&apos;) != &apos;&apos;
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/vet-visits">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST poultry/vet-visits" enabled="true">
             <stringProp name="HTTPSampler.domain">${SERVER_NAME}</stringProp>
             <stringProp name="HTTPSampler.port">${PORT}</stringProp>
             <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
